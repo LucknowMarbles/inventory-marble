@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "purchases",
+  "info": {
+    "singularName": "purchase",
+    "pluralName": "purchases",
+    "displayName": "purchase"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "billNumber": {
+      "type": "string"
+    },
+    "area": {
+      "type": "decimal"
+    },
+    "praduct": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::praduct.praduct",
+      "inversedBy": "purchases"
+    },
+    "cost": {
+      "type": "decimal"
+    },
+    "sales": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sale.sale",
+      "mappedBy": "purchase"
+    }
+  }
+}

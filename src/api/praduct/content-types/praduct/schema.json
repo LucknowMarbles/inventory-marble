@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "praducts",
+  "info": {
+    "singularName": "praduct",
+    "pluralName": "praducts",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "displayRate": {
+      "type": "decimal"
+    },
+    "Length": {
+      "type": "decimal"
+    },
+    "width": {
+      "type": "decimal"
+    },
+    "purchases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::purchase.purchase",
+      "mappedBy": "praduct"
+    },
+    "sales": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sale.sale",
+      "mappedBy": "praduct"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales",
+  "info": {
+    "singularName": "sale",
+    "pluralName": "sales",
+    "displayName": "sale",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "billNumber": {
+      "type": "string"
+    },
+    "area": {
+      "type": "decimal"
+    },
+    "sellingPrice": {
+      "type": "decimal"
+    },
+    "praduct": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::praduct.praduct",
+      "inversedBy": "sales"
+    },
+    "purchase": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::purchase.purchase",
+      "inversedBy": "sales"
+    }
+  }
+}
