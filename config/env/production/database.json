@@ -4,7 +4,7 @@
       "default": {
         "connector": "bookshelf",
         "settings": {
-          "uri" : "postgres://mgochqsrhrftcl:d15652676187cb8daddcb5cf26bfee0824652bd53220675d2241c590ff58f8c4@ec2-54-165-178-178.compute-1.amazonaws.com:5432/d4d2m9bvdi8gmo"
+          "uri" : "postgres://mgochqsrhrftcl:d15652676187cb8daddcb5cf26bfee0824652bd53220675d2241c590ff58f8c4@ec2-54-165-178-178.compute-1.amazonaws.com:5432/d4d2m9bvdi8gmo",
           "client": "postgres",
           "host": "${process.env.DATABASE_HOST}",
           "port": "${process.env.DATABASE_PORT}",
