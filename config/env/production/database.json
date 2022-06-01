@@ -4,22 +4,14 @@
       "default": {
         "connector": "bookshelf",
         "settings": {
+          "uri" : "postgres://mgochqsrhrftcl:d15652676187cb8daddcb5cf26bfee0824652bd53220675d2241c590ff58f8c4@ec2-54-165-178-178.compute-1.amazonaws.com:5432/d4d2m9bvdi8gmo"
           "client": "postgres",
           "host": "${process.env.DATABASE_HOST}",
           "port": "${process.env.DATABASE_PORT}",
           "database": "${process.env.DATABASE_NAME}",
           "username": "${process.env.DATABASE_USERNAME}",
           "password": "${process.env.DATABASE_PASSWORD}"
-        },
-        "options": {
-          "ssl": false,
-          "pool": {
-            "min": 0,
-            "max": 15,
-            "idleTimeoutMillis": 30000,
-            "createTimeoutMillis": 30000,
-            "acquireTimeoutMillis": 30000
-          }
+        }
         }
       }
     }
